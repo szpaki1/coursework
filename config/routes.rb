@@ -1,9 +1,9 @@
 Coursework::Application.routes.draw do
-  get "pages/home"
+  match '/blog', :to => 'pages#blog'
+  match '/publication',   :to => 'pages#publication'
+  match '/home',    :to => 'pages#home'
 
-  get "pages/blog"
-
-  get "pages/publication"
+  root :to => 'pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
