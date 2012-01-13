@@ -1,7 +1,13 @@
 Coursework::Application.routes.draw do
+  get "news/new"
+
+  match '/create',  :to => 'news#new'
+
   match '/blog', :to => 'pages#blog'
   match '/publication',   :to => 'pages#publication'
   match '/home',    :to => 'pages#home'
+  match '/pdf',   :to => 'pages#pdf'
+  match '/new',    :to => 'pages#new'
 
   root :to => 'pages#home'
 

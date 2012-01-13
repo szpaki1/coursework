@@ -11,4 +11,12 @@ class PagesController < ApplicationController
 	@title = "Publications"
   end
 
+  def new
+	@title = "News"
+  end
+
+  def pdf
+	@title = "PDF"
+  end
+
 end
