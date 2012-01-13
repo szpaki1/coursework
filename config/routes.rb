@@ -1,5 +1,6 @@
 Coursework::Application.routes.draw do
-  get "news/new"
+  resources :news
+#  get "news/new"
 
   match '/create',  :to => 'news#new'
 
