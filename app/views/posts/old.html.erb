@@ -1,0 +1,27 @@
+<div id="content">
+
+<div id="contentleft">
+
+<h1>Create a new</h1>
+
+<%= form_for :new do |f| %>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_field :content %>
+  </div>
+  <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.text_field :photo %>
+  </div>
+  <div class="actions">
+    <%= f.submit "New" %>
+  </div>
+<% end %>
+
+<div style="clear:both;"></div>
+ 		
+</div>

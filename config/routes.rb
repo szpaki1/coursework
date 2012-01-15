@@ -1,14 +1,19 @@
 Coursework::Application.routes.draw do
-  resources :news
+  ActiveAdmin.routes(self)
+
+  devise_for :admin_users, ActiveAdmin::Devise.config
+
+  resources :posts
+  resources :attachments
 #  get "news/new"
 
-  match '/create',  :to => 'news#new'
+  match '/create',  :to => 'posts#new'
 
   match '/blog', :to => 'pages#blog'
   match '/publication',   :to => 'pages#publication'
   match '/home',    :to => 'pages#home'
-  match '/pdf',   :to => 'pages#pdf'
-  match '/new',    :to => 'pages#new'
+  match '/pdf',   :to => 'attachments#index'
+  match '/new',    :to => 'posts#index'
 
   root :to => 'pages#home'
 

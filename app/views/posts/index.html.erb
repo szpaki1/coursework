@@ -1,0 +1,32 @@
+<div id="content">
+
+<div id="contentleft">
+
+<div style="text-align: right; font-size:1.7em;">
+<%= link_to 'Create a new', new_post_path %> 
+</div>
+
+<h1>All news</h1>
+ 
+<% @posts.each do |post| %>
+    <p class="small"><img src="images/clock.gif" alt="" /> <%= post.title %></p>
+    <blockquote><%= post.content %></blockquote>
+	<div style="text-align: center; font-size:1.4em;">
+
+	</div>
+	<table>
+	  <tr>
+	    <td><%= link_to 'Show', post %></td>
+	    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+	    <td><%= link_to 'Delete', post, :confirm => 'Confirm deletion, please.', :method => :delete %></td>
+	  </tr>
+	</table>
+<% end %>
+
+ 
+<br />
+ 
+
+<div style="clear:both;"></div>
+ 		
+</div>

@@ -1,0 +1,21 @@
+<div id="content">
+
+<div id="contentleft">
+
+<div style="text-align: right; font-size:1.7em;">
+<%= link_to 'Upload a file', new_upload_path %> 
+</div>
+
+<h1>All files</h1>
+ 
+<% @pdfs.each do |pdf| %>
+    <p class="small"><img src="images/clock.gif" alt="" /> <%= post.file_file_name %></p>
+<% end %>
+
+ 
+<br />
+ 
+
+<div style="clear:both;"></div>
+ 		
+</div>

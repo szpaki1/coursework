@@ -1,0 +1,20 @@
+<%= form_for(@attachment,:html => { :multipart => true }) do |f| %>
+  <% if @attachment.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@attachment.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <ul>
+    <% @attachment.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+ 
+  <div class="field">
+  <%= f.label :file, 'Choose appropriate file' %><br />
+  <%= f.file_field :file %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

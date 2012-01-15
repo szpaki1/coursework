@@ -1,0 +1,20 @@
+<%= form_for(@pdf,:html => { :multipart => true }) do |f| %>
+  <% if @pdf.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@pdf.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <ul>
+    <% @pdf.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+ 
+  <div class="field">
+  <%= f.label :file, 'Choose appropriate file' %><br />
+  <%= f.file_field :file %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

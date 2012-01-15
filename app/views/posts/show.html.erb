@@ -1,0 +1,28 @@
+<div id="content">
+
+<div id="contentleft">
+
+<p class="notice"><%= notice %></p>
+ 
+<p>
+  <h1><%= @post.title %></h1>
+</p>
+ 
+<p>
+  <%= @post.content %>
+</p>
+
+	<div style="text-align: center; font-size:1.4em;">
+	    <% if @post.image.exists? then %>
+		<p><%= image_tag @post.image.url(:small) %></p>
+	    <% else %>
+		<p> No photo attached. </p>
+	    <% end %>
+	</div>
+ 
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+
+<div style="clear:both;"></div>
+ 		
+</div>

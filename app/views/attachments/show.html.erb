@@ -1,0 +1,15 @@
+<div id="content">
+
+<div id="contentleft">
+
+<p class="notice"><%= notice %></p>
+ 
+<p>
+	<h1><%= @attachment.file_file_name %>
+</p>
+<p class="small"><img src="images/clock.gif" alt="" /> <%=link_to "Download", @attachment.file.url(:original, false) %></h1>
+</p>
+<%= link_to 'Back', attachments_path %>
+<div style="clear:both;"></div>
+ 		
+</div>
