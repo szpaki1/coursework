@@ -9,7 +9,7 @@
 <h1>All files</h1>
  
 <% @attachments.each do |attachment| %>
-    <p class="small"><img src="images/clock.gif" alt="" /> <%= attachment.file_file_name %></p>
+    <p class="small"><%= attachment.file_file_name %></p>
 	<table>
 	  <tr>
 	    <td><%= link_to 'Show', attachment %></td>
